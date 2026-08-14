@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+==<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -47,7 +47,7 @@
       <div class="puppies-grid" id="girlsGrid"><!--PUPPY_CARDS_GIRLS_START-->
 
         <div class="empty-note">
-          <p>We don't have any puppies available right now. Our next litter is on the way — join the waitlist and we'll let you know first.</p>
+          <p>No girls available right now.</p>
           <a href="javascript:void(0)" onclick="openWaitlist()" class="btn btn-ghost">Join the waitlist</a>
         </div>
       <!--PUPPY_CARDS_GIRLS_END--></div>
@@ -56,10 +56,19 @@
     <div class="pup-subsection" id="boysSection" style="display:none">
       <div class="pup-subhead">
         <h3>Boys</h3>
-        <span class="count" id="boysCount"><!--BOYS_COUNT_START-->—<!--BOYS_COUNT_END--></span>
+        <span class="count" id="boysCount"><!--BOYS_COUNT_START-->1 available<!--BOYS_COUNT_END--></span>
       </div>
       <div class="puppies-grid" id="boysGrid"><!--PUPPY_CARDS_BOYS_START-->
 
+        <div class="pcard" onclick="openProfile('x1')">
+          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="body">
+            <h3>luis</h3>
+            <p class="meta">Smooth coat · cream</p>
+            <p class="note">Playful and gentle</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('x1')">Enquire about him</a></div>
+          </div>
+        </div>
       <!--PUPPY_CARDS_BOYS_END--></div>
     </div>
 
@@ -126,7 +135,11 @@
   /* n8n replaces everything between the START/END markers with the real
      JSON.stringify() object built from the "Puppies" tab of the Sheet.
      Shape: each puppy keyed by id, with a photoUrls array + updates array. */
-  const puppyProfiles = /*__PUPPY_PROFILES_START__*/{}/*__PUPPY_PROFILES_END__*/;
+  const puppyProfiles = /*__PUPPY_PROFILES_START__*/{
+    x1: { name:'luis', breed:'Dachshund · Smooth coat', sex:'Male', born:'12/02/2026', color:'cream', vax:'Up to date',
+      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      updates:[{date:'Today',text:'Latest photo.'}] }
+  }/*__PUPPY_PROFILES_END__*/;
 
   let currentProfileId = null;
 

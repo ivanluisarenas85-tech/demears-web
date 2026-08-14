@@ -40,8 +40,54 @@
     </div>
     <div class="fam-grid" id="famGrid"><!--GALLERY_CARDS_START-->
 
-      <div class="empty-note">
-        <p>Our puppies are just starting their journeys home. Family stories will appear here soon.</p>
+      <div class="fam-card" onclick="openFamily('x1')">
+        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
+        <div class="body">
+          <h3>luis</h3>
+          <p class="quote-mark">"</p>
+          <p class="quote">Welcomed into their forever home.</p>
+          <p class="who">— smit, brisbane · home since 11/12/2025</p>
+        </div>
+      </div>
+
+      <div class="fam-card" onclick="openFamily('x2')">
+        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
+        <div class="body">
+          <h3>max</h3>
+          <p class="quote-mark">"</p>
+          <p class="quote">Went to the vet, all good</p>
+          <p class="who">— smit, brisbane · home since 12/12/2025</p>
+        </div>
+      </div>
+
+      <div class="fam-card" onclick="openFamily('x3')">
+        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
+        <div class="body">
+          <h3>luisa</h3>
+          <p class="quote-mark">"</p>
+          <p class="quote">Welcomed into their forever home.</p>
+          <p class="who">— smit, brisbane · home since 13/12/2025</p>
+        </div>
+      </div>
+
+      <div class="fam-card" onclick="openFamily('x4')">
+        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
+        <div class="body">
+          <h3>malta</h3>
+          <p class="quote-mark">"</p>
+          <p class="quote">Welcomed into their forever home.</p>
+          <p class="who">— smit, brisbane · home since 14/12/2025</p>
+        </div>
+      </div>
+
+      <div class="fam-card" onclick="openFamily('x5')">
+        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
+        <div class="body">
+          <h3>rey</h3>
+          <p class="quote-mark">"</p>
+          <p class="quote">Went to the vet, all good</p>
+          <p class="who">— smit, brisbane · home since 15/12/2025</p>
+        </div>
       </div>
     <!--GALLERY_CARDS_END--></div>
   </div>
@@ -91,7 +137,18 @@
 <script>
   /* n8n replaces everything between the START/END markers with the real
      JSON.stringify() object built from the "Families" tab of the Sheet. */
-  const familyProfiles = /*__FAMILY_PROFILES_START__*/{}/*__FAMILY_PROFILES_END__*/;
+  const familyProfiles = /*__FAMILY_PROFILES_START__*/{
+    x1: { name:'luis', family:'smit', city:'brisbane', since:'11/12/2025', photos:1,
+      updates:[] },
+    x2: { name:'max', family:'smit', city:'brisbane', since:'12/12/2025', photos:1,
+      updates:[{date:'2026-08-14', text:'Went to the vet, all good'},{date:'2026-08-07', text:'Eating on his own now'}] },
+    x3: { name:'luisa', family:'smit', city:'brisbane', since:'13/12/2025', photos:1,
+      updates:[] },
+    x4: { name:'malta', family:'smit', city:'brisbane', since:'14/12/2025', photos:1,
+      updates:[] },
+    x5: { name:'rey', family:'smit', city:'brisbane', since:'15/12/2025', photos:1,
+      updates:[{date:'2026-08-14', text:'Went to the vet, all good'},{date:'2026-08-07', text:'Eating on his own now'}] }
+  }/*__FAMILY_PROFILES_END__*/;
 
   function openFamily(id){
     const f = familyProfiles[id];

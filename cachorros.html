@@ -61,13 +61,18 @@
     <div class="pup-subsection" id="boysSection">
       <div class="pup-subhead">
         <h3>Boys</h3>
-        <span class="count" id="boysCount"><!--BOYS_COUNT_START-->—<!--BOYS_COUNT_END--></span>
+        <span class="count" id="boysCount"><!--BOYS_COUNT_START-->1 available<!--BOYS_COUNT_END--></span>
       </div>
       <div class="puppies-grid" id="boysGrid"><!--PUPPY_CARDS_BOYS_START-->
 
-        <div class="empty-note">
-          <p>No boys available right now.</p>
-          <a href="javascript:void(0)" onclick="openWaitlist()" class="btn btn-ghost">Join the waitlist</a>
+        <div class="pcard" onclick="openProfile('x2')">
+          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="body">
+            <h3>max</h3>
+            <p class="meta">Long coat · red</p>
+            <p class="note">Playful and gentle</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('x2')">Enquire about him</a></div>
+          </div>
         </div>
       <!--PUPPY_CARDS_BOYS_END--></div>
     </div>
@@ -138,7 +143,10 @@
   const puppyProfiles = /*__PUPPY_PROFILES_START__*/{
     x3: { name:'luisa', breed:'Dachshund · Long coat', sex:'Female', born:'14/02/2026', color:'purple', vax:'Up to date',
       personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
-      updates:[] }
+      updates:[] },
+    x2: { name:'max', breed:'Dachshund · Long coat', sex:'Male', born:'13/02/2026', color:'red', vax:'Up to date',
+      personality:'Playful and gentle', notes:'', photos:1,
+      updates:[{date:'2026-08-14', text:'Went to the vet, all good'},{date:'2026-08-07', text:'Eating on his own now'}] }
   }/*__PUPPY_PROFILES_END__*/;
 
   let currentProfileId = null;

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Available Puppies | Demears Dachshunds</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='98' fill='%23FAF9F5'/%3E%3Cg transform='translate(100,108)' fill='none' stroke='%23B8912E' stroke-width='4'%3E%3Cpath d='M 62,-4 Q 76,-14 72,-26 Q 68,-16 58,-8 Z'/%3E%3Cellipse cx='4' cy='0' rx='58' ry='16'/%3E%3Cline x1='-40' y1='16' x2='-40' y2='34'/%3E%3Cline x1='-18' y1='18' x2='-18' y2='36'/%3E%3Cline x1='26' y1='18' x2='26' y2='36'/%3E%3Cline x1='48' y1='16' x2='48' y2='32'/%3E%3Ccircle cx='-58' cy='-6' r='15'/%3E%3Cellipse cx='-78' cy='-1' rx='9' ry='6'/%3E%3Cpath d='M -50,-14 Q -34,-10 -36,10 Q -38,20 -48,14 Q -54,4 -52,-10 Z'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="Miniature dachshund puppies currently available at Demears Dachshunds — smooth and long-haired, raised on a Tamborine farm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <span class="dd-logo" role="img" aria-label="Demears Dachshunds"></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="cachorros.html" class="active">Puppies</a>
+      <a href="familias.html">Families</a>
+      <a href="faq.html">FAQ</a>
+      <a href="nosotros.html">About us</a>
+    </nav>
+    <a href="javascript:void(0)" onclick="openConsult()" class="nav-cta">Enquire</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Current litter</p>
+      <h2>Available puppies</h2>
+      <p>Updated with every new litter. Enquiries are answered in the order they come in — please reach out early.</p>
+    </div>
+
+    <div class="pup-subsection" id="girlsSection">
+      <div class="pup-subhead">
+        <h3>Girls</h3>
+        <span class="count" id="girlsCount"><!--GIRLS_COUNT_START-->2 available<!--GIRLS_COUNT_END--></span>
+      </div>
+      <div class="puppies-grid" id="girlsGrid"><!--PUPPY_CARDS_GIRLS_START-->
+        <div class="pcard" onclick="openProfile('h1')">
+          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="body">
+            <h3>Name</h3>
+            <p class="meta">Smooth coat · Colour TBC</p>
+            <p class="note">Short note on her personality (e.g. playful, gentle, curious).</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('h1')">Enquire about her</a></div>
+          </div>
+        </div>
+
+        <div class="pcard" onclick="openProfile('h2')">
+          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="body">
+            <h3>Name</h3>
+            <p class="meta">Long coat · Colour TBC</p>
+            <p class="note">Short note on her personality.</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('h2')">Enquire about her</a></div>
+          </div>
+        </div>
+      <!--PUPPY_CARDS_GIRLS_END--></div>
+    </div>
+
+    <div class="pup-subsection" id="boysSection">
+      <div class="pup-subhead">
+        <h3>Boys</h3>
+        <span class="count" id="boysCount"><!--BOYS_COUNT_START-->1 available<!--BOYS_COUNT_END--></span>
+      </div>
+      <div class="puppies-grid" id="boysGrid"><!--PUPPY_CARDS_BOYS_START-->
+        <div class="pcard" onclick="openProfile('m1')">
+          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="body">
+            <h3>Name</h3>
+            <p class="meta">Smooth coat · Colour TBC</p>
+            <p class="note">Short note on his personality.</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('m1')">Enquire about him</a></div>
+          </div>
+        </div>
+      <!--PUPPY_CARDS_BOYS_END--></div>
+    </div>
+
+    <div class="waitlist">
+      <div>
+        <h3>Didn't see the right fit?</h3>
+        <p>Join the waitlist and we'll let you know as soon as the next litter arrives — before it's published here.</p>
+      </div>
+      <a href="javascript:void(0)" onclick="openWaitlist()" class="btn btn-ghost">Join the waitlist</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="dd-logo dd-logo-footer" role="img" aria-label="Demears Dachshunds"></span>
+        <p>Longhaired and smooth miniature dachshunds, raised on a working farm in Tamborine, Queensland, with real love.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in touch</h4>
+        <div class="contact-methods">
+          <a class="method" href="mailto:Meisha@demearsdachshunds.com"><span class="icon">✉️</span><span><span class="label">Email</span><br><span class="value">Meisha@demearsdachshunds.com</span></span></a>
+          <a class="method" href="https://wa.me/61437437650" target="_blank" rel="noopener"><span class="icon">💬</span><span><span class="label">WhatsApp</span><br><span class="value">0437 437 650</span></span></a>
+          <a class="method" href="tel:+61437437650"><span class="icon">📞</span><span><span class="label">Phone</span><br><span class="value">0437 437 650</span></span></a>
+          <a class="method" href="https://instagram.com/demearsdachshunds" target="_blank" rel="noopener"><span class="icon">📷</span><span><span class="label">Instagram</span><br><span class="value">@demearsdachshunds</span></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Demears Dachshunds — raised on a working farm, with real love. © 2026</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/61437437650" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">💬</a>
+
+<div class="modal-overlay" id="profileModal" onclick="if(event.target===this) closeProfile()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeProfile()" aria-label="Close">✕</button>
+    <div class="modal-gallery-main" id="modalMainPhoto">Photo</div>
+    <div class="modal-thumbs" id="modalThumbs"></div>
+    <div class="modal-content">
+      <p class="eyebrow" id="modalBreed">Dachshund · Smooth coat</p>
+      <h2 id="modalName">Name</h2>
+      <div class="modal-facts">
+        <div><p class="label">Sex</p><p class="value" id="modalSex">—</p></div>
+        <div><p class="label">Born</p><p class="value" id="modalBorn">—</p></div>
+        <div><p class="label">Colour / pattern</p><p class="value" id="modalColor">—</p></div>
+        <div><p class="label">Vaccinations</p><p class="value" id="modalVax">—</p></div>
+      </div>
+      <h4>Personality</h4>
+      <p id="modalPersonality">—</p>
+      <h4>Growing up</h4>
+      <div class="updates-list" id="modalUpdates"></div>
+      <h4>Additional notes</h4>
+      <p id="modalNotes">—</p>
+      <a href="javascript:void(0)" onclick="closeProfile(); openConsult(currentProfileId)" class="btn btn-solid">Enquire about this puppy</a>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  /* n8n replaces everything between the START/END markers with the real
+     JSON.stringify() object built from the "Puppies" tab of the Sheet.
+     Shape: each puppy keyed by id, with a photoUrls array + updates array. */
+  const puppyProfiles = /*__PUPPY_PROFILES_START__*/{
+    h1: { name:'Name', breed:'Dachshund · Smooth coat', sex:'Female', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
+      personality:'Longer description of her personality, how she gets on with other dogs, kids, energy level, etc.',
+      notes:'Any extra info: microchip, worming, distinguishing features.', photos:3,
+      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Week 4',text:'Eyes open now and starting to move around the pen.'},{date:'Today',text:'Latest photo — this is her right now.'}] },
+    h2: { name:'Name', breed:'Dachshund · Long coat', sex:'Female', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
+      personality:'Longer description of her personality.', notes:'Any extra info.', photos:2,
+      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Today',text:'Latest photo — this is her right now.'}] },
+    m1: { name:'Name', breed:'Dachshund · Smooth coat', sex:'Male', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
+      personality:'Longer description of his personality.', notes:'Any extra info.', photos:2,
+      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Today',text:'Latest photo — this is him right now.'}] }
+  }/*__PUPPY_PROFILES_END__*/;
+
+  let currentProfileId = null;
+
+  function openProfile(id){
+    const p = puppyProfiles[id];
+    if(!p) return;
+    currentProfileId = id;
+    document.getElementById('modalName').textContent = p.name;
+    document.getElementById('modalBreed').textContent = p.breed;
+    document.getElementById('modalSex').textContent = p.sex;
+    document.getElementById('modalBorn').textContent = p.born;
+    document.getElementById('modalColor').textContent = p.color;
+    document.getElementById('modalVax').textContent = p.vax;
+    document.getElementById('modalPersonality').textContent = p.personality;
+    document.getElementById('modalNotes').textContent = p.notes;
+
+    buildGallery(document.getElementById('modalMainPhoto'), document.getElementById('modalThumbs'), p, p.name);
+
+    const updatesEl = document.getElementById('modalUpdates');
+    updatesEl.innerHTML = '';
+    p.updates.forEach(u => {
+      const div = document.createElement('div');
+      div.className = 'update-entry';
+      div.innerHTML = '<p class="date">' + u.date + '</p><p>' + u.text + '</p>';
+      updatesEl.appendChild(div);
+    });
+
+    document.getElementById('profileModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProfile(){
+    document.getElementById('profileModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+</body>
+</html>

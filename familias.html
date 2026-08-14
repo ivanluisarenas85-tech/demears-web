@@ -39,31 +39,24 @@
       <p>Each of these is now settled into their new home. Here are their photos with their family, along with a few words from the people who adopted them.</p>
     </div>
     <div class="fam-grid" id="famGrid"><!--GALLERY_CARDS_START-->
-      <div class="fam-card" onclick="openFamily('f1')">
+
+      <div class="fam-card" onclick="openFamily('x4')">
         <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
         <div class="body">
-          <h3>Name</h3>
+          <h3>malta</h3>
           <p class="quote-mark">"</p>
-          <p class="quote">Space for a few words from the family about how it's going with their puppy.</p>
-          <p class="who">— Family, city · home since Month YYYY</p>
+          <p class="quote">Welcomed into their forever home.</p>
+          <p class="who">— smit, brisbane · home since 14/12/2025</p>
         </div>
       </div>
-      <div class="fam-card" onclick="openFamily('f2')">
+
+      <div class="fam-card" onclick="openFamily('x5')">
         <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
         <div class="body">
-          <h3>Name</h3>
+          <h3>rey</h3>
           <p class="quote-mark">"</p>
-          <p class="quote">Space for a few words from the family.</p>
-          <p class="who">— Family, city · home since Month YYYY</p>
-        </div>
-      </div>
-      <div class="fam-card" onclick="openFamily('f3')">
-        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
-        <div class="body">
-          <h3>Name</h3>
-          <p class="quote-mark">"</p>
-          <p class="quote">Space for a few words from the family.</p>
-          <p class="who">— Family, city · home since Month YYYY</p>
+          <p class="quote">Welcomed into their forever home.</p>
+          <p class="who">— smit, brisbane · home since 15/12/2025</p>
         </div>
       </div>
     <!--GALLERY_CARDS_END--></div>
@@ -115,12 +108,10 @@
   /* n8n replaces everything between the START/END markers with the real
      JSON.stringify() object built from the "Families" tab of the Sheet. */
   const familyProfiles = /*__FAMILY_PROFILES_START__*/{
-    f1: { name:'Name', family:'Family', city:'City', since:'Month YYYY', photos:3,
-      updates:[{date:'Week 1',text:'First note from the family after arriving home.'},{date:'Month 1',text:'Update on how they settled in, playing with other dogs or the family.'},{date:'Month 3',text:'Latest update sent by the family.'}] },
-    f2: { name:'Name', family:'Family', city:'City', since:'Month YYYY', photos:2,
-      updates:[{date:'Week 1',text:'First note from the family.'},{date:'Month 2',text:'Latest update sent by the family.'}] },
-    f3: { name:'Name', family:'Family', city:'City', since:'Month YYYY', photos:4,
-      updates:[{date:'Week 1',text:'First note from the family.'},{date:'Month 1',text:'A follow-up update.'},{date:'Month 2',text:'Another update.'},{date:'Month 4',text:'Latest update sent by the family.'}] }
+    x4: { name:'malta', family:'smit', city:'brisbane', since:'14/12/2025', photos:1,
+      updates:[] },
+    x5: { name:'rey', family:'smit', city:'brisbane', since:'15/12/2025', photos:1,
+      updates:[] }
   }/*__FAMILY_PROFILES_END__*/;
 
   function openFamily(id){

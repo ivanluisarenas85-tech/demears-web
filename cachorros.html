@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -45,23 +45,24 @@
         <span class="count" id="girlsCount"><!--GIRLS_COUNT_START-->2 available<!--GIRLS_COUNT_END--></span>
       </div>
       <div class="puppies-grid" id="girlsGrid"><!--PUPPY_CARDS_GIRLS_START-->
-        <div class="pcard" onclick="openProfile('h1')">
+
+        <div class="pcard" onclick="openProfile('x3')">
           <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
-            <h3>Name</h3>
-            <p class="meta">Smooth coat · Colour TBC</p>
-            <p class="note">Short note on her personality (e.g. playful, gentle, curious).</p>
-            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('h1')">Enquire about her</a></div>
+            <h3>luisa</h3>
+            <p class="meta">Long coat · purple</p>
+            <p class="note">Playful and gentle</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('x3')">Enquire about her</a></div>
           </div>
         </div>
 
-        <div class="pcard" onclick="openProfile('h2')">
+        <div class="pcard" onclick="openProfile('x4')">
           <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
-            <h3>Name</h3>
-            <p class="meta">Long coat · Colour TBC</p>
-            <p class="note">Short note on her personality.</p>
-            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('h2')">Enquire about her</a></div>
+            <h3>malta</h3>
+            <p class="meta">Long coat · orange</p>
+            <p class="note">Playful and gentle</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('x4')">Enquire about her</a></div>
           </div>
         </div>
       <!--PUPPY_CARDS_GIRLS_END--></div>
@@ -73,13 +74,14 @@
         <span class="count" id="boysCount"><!--BOYS_COUNT_START-->1 available<!--BOYS_COUNT_END--></span>
       </div>
       <div class="puppies-grid" id="boysGrid"><!--PUPPY_CARDS_BOYS_START-->
-        <div class="pcard" onclick="openProfile('m1')">
+
+        <div class="pcard" onclick="openProfile('x1')">
           <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
-            <h3>Name</h3>
-            <p class="meta">Smooth coat · Colour TBC</p>
-            <p class="note">Short note on his personality.</p>
-            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('m1')">Enquire about him</a></div>
+            <h3>luis</h3>
+            <p class="meta">Smooth coat · cream</p>
+            <p class="note">Playful and gentle</p>
+            <div class="consult-btn"><a href="javascript:void(0)" onclick="event.stopPropagation(); openConsult('x1')">Enquire about him</a></div>
           </div>
         </div>
       <!--PUPPY_CARDS_BOYS_END--></div>
@@ -149,16 +151,15 @@
      JSON.stringify() object built from the "Puppies" tab of the Sheet.
      Shape: each puppy keyed by id, with a photoUrls array + updates array. */
   const puppyProfiles = /*__PUPPY_PROFILES_START__*/{
-    h1: { name:'Name', breed:'Dachshund · Smooth coat', sex:'Female', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
-      personality:'Longer description of her personality, how she gets on with other dogs, kids, energy level, etc.',
-      notes:'Any extra info: microchip, worming, distinguishing features.', photos:3,
-      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Week 4',text:'Eyes open now and starting to move around the pen.'},{date:'Today',text:'Latest photo — this is her right now.'}] },
-    h2: { name:'Name', breed:'Dachshund · Long coat', sex:'Female', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
-      personality:'Longer description of her personality.', notes:'Any extra info.', photos:2,
-      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Today',text:'Latest photo — this is her right now.'}] },
-    m1: { name:'Name', breed:'Dachshund · Smooth coat', sex:'Male', born:'DD/MM/YYYY', color:'TBC', vax:'Up to date',
-      personality:'Longer description of his personality.', notes:'Any extra info.', photos:2,
-      updates:[{date:'Week 1',text:'Newborn, first photos of the litter.'},{date:'Today',text:'Latest photo — this is him right now.'}] }
+    x3: { name:'luisa', breed:'Dachshund · Long coat', sex:'Female', born:'14/02/2026', color:'purple', vax:'Up to date',
+      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      updates:[{date:'Today',text:'Latest photo.'}] },
+    x4: { name:'malta', breed:'Dachshund · Long coat', sex:'Female', born:'15/02/2026', color:'orange', vax:'Up to date',
+      personality:'Playful and gentle', notes:'', photos:1,
+      updates:[{date:'Today',text:'Latest photo.'}] },
+    x1: { name:'luis', breed:'Dachshund · Smooth coat', sex:'Male', born:'12/02/2026', color:'cream', vax:'Up to date',
+      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      updates:[{date:'Today',text:'Latest photo.'}] }
   }/*__PUPPY_PROFILES_END__*/;
 
   let currentProfileId = null;

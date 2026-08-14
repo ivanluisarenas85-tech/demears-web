@@ -104,8 +104,8 @@
       <p class="fam-sub" id="famSub">Family · City</p>
     </div>
     <div class="modal-content" style="padding-top:14px;">
-      <h4>How they're doing</h4>
-      <div class="updates-list" id="famUpdates"></div>
+      <div id="famSecUpdates"><h4>How they're doing</h4>
+      <div class="updates-list" id="famUpdates"></div></div>
     </div>
   </div>
 </div>
@@ -139,6 +139,9 @@
       div.innerHTML = '<p class="date">' + u.date + '</p><p>' + u.text + '</p>';
       updatesEl.appendChild(div);
     });
+
+    // Ocultar la seccion si no hay actualizaciones
+    document.getElementById('famSecUpdates').style.display = (f.updates && f.updates.length) ? '' : 'none';
 
     document.getElementById('familyModal').classList.add('open');
     document.body.style.overflow = 'hidden';

@@ -132,12 +132,12 @@
         <div><p class="label">Colour / pattern</p><p class="value" id="modalColor">—</p></div>
         <div><p class="label">Vaccinations</p><p class="value" id="modalVax">—</p></div>
       </div>
-      <h4>Personality</h4>
-      <p id="modalPersonality">—</p>
-      <h4>Growing up</h4>
-      <div class="updates-list" id="modalUpdates"></div>
-      <h4>Additional notes</h4>
-      <p id="modalNotes">—</p>
+      <div id="secPersonality"><h4>Personality</h4>
+      <p id="modalPersonality">—</p></div>
+      <div id="secUpdates"><h4>Growing up</h4>
+      <div class="updates-list" id="modalUpdates"></div></div>
+      <div id="secNotes"><h4>Additional notes</h4>
+      <p id="modalNotes">—</p></div>
       <a href="javascript:void(0)" onclick="closeProfile(); openConsult(currentProfileId)" class="btn btn-solid">Enquire about this puppy</a>
     </div>
   </div>
@@ -186,6 +186,11 @@
       div.innerHTML = '<p class="date">' + u.date + '</p><p>' + u.text + '</p>';
       updatesEl.appendChild(div);
     });
+
+    // Ocultar secciones sin informacion
+    document.getElementById('secPersonality').style.display = (p.personality && p.personality.trim()) ? '' : 'none';
+    document.getElementById('secNotes').style.display = (p.notes && p.notes.trim()) ? '' : 'none';
+    document.getElementById('secUpdates').style.display = (p.updates && p.updates.length) ? '' : 'none';
 
     document.getElementById('profileModal').classList.add('open');
     document.body.style.overflow = 'hidden';

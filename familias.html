@@ -40,24 +40,8 @@
     </div>
     <div class="fam-grid" id="famGrid"><!--GALLERY_CARDS_START-->
 
-      <div class="fam-card" onclick="openFamily('x4')">
-        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
-        <div class="body">
-          <h3>malta</h3>
-          <p class="quote-mark">"</p>
-          <p class="quote">Welcomed into their forever home.</p>
-          <p class="who">— smit, brisbane · home since 14/12/2025</p>
-        </div>
-      </div>
-
-      <div class="fam-card" onclick="openFamily('x5')">
-        <div class="ph">Photo with their new family<span class="view-hint">View album →</span></div>
-        <div class="body">
-          <h3>rey</h3>
-          <p class="quote-mark">"</p>
-          <p class="quote">Welcomed into their forever home.</p>
-          <p class="who">— smit, brisbane · home since 15/12/2025</p>
-        </div>
+      <div class="empty-note">
+        <p>Our puppies are just starting their journeys home. Family stories will appear here soon.</p>
       </div>
     <!--GALLERY_CARDS_END--></div>
   </div>
@@ -107,12 +91,7 @@
 <script>
   /* n8n replaces everything between the START/END markers with the real
      JSON.stringify() object built from the "Families" tab of the Sheet. */
-  const familyProfiles = /*__FAMILY_PROFILES_START__*/{
-    x4: { name:'malta', family:'smit', city:'brisbane', since:'14/12/2025', photos:1,
-      updates:[] },
-    x5: { name:'rey', family:'smit', city:'brisbane', since:'15/12/2025', photos:1,
-      updates:[] }
-  }/*__FAMILY_PROFILES_END__*/;
+  const familyProfiles = /*__FAMILY_PROFILES_START__*/{}/*__FAMILY_PROFILES_END__*/;
 
   function openFamily(id){
     const f = familyProfiles[id];

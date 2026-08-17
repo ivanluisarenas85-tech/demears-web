@@ -17,23 +17,43 @@ document.addEventListener('DOMContentLoaded', function(){
 function buildGallery(mainPhotoEl, thumbsEl, item, altText){
   const media = item.media || (item.photoUrls ? item.photoUrls.map(u => ({type:'image', url:u})) : null);
   const count = media ? media.length : (item.photos || 1);
+  let current = 0;
 
-  const show = (i) => {
+  const render = (i) => {
+    current = i;
     if(media && media[i]){
       const m = media[i];
       if(m.type === 'youtube' || m.type === 'drive'){
         mainPhotoEl.innerHTML = '<iframe src="' + m.url + '" style="width:100%;height:100%;border:0;border-radius:6px;" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+        mainPhotoEl.style.cursor = 'default';
+        mainPhotoEl.onclick = null;
       } else if(m.type === 'video'){
-        mainPhotoEl.innerHTML = '<video src="' + m.url + '" controls style="width:100%;height:100%;object-fit:cover;border-radius:6px;"></video>';
+        mainPhotoEl.innerHTML = '<video src="' + m.url + '" controls style="width:100%;height:100%;object-fit:contain;border-radius:6px;"></video>';
+        mainPhotoEl.style.cursor = 'default';
+        mainPhotoEl.onclick = null;
       } else {
         mainPhotoEl.innerHTML = '<img src="' + m.url + '" alt="' + altText + '">';
+        // Al hacer clic en la foto grande, pasar a la siguiente (si hay más de una)
+        if(count > 1){
+          mainPhotoEl.style.cursor = 'pointer';
+          mainPhotoEl.onclick = () => selectThumb((current + 1) % count);
+        } else {
+          mainPhotoEl.style.cursor = 'default';
+          mainPhotoEl.onclick = null;
+        }
       }
     } else {
       mainPhotoEl.innerHTML = 'Photo ' + (i + 1);
+      mainPhotoEl.onclick = null;
     }
   };
 
-  show(0);
+  const selectThumb = (i) => {
+    render(i);
+    thumbsEl.querySelectorAll('.thumb').forEach((el, idx) => el.classList.toggle('active', idx === i));
+  };
+
+  render(0);
   thumbsEl.innerHTML = '';
   for(let i = 0; i < count; i++){
     const t = document.createElement('div');
@@ -45,11 +65,7 @@ function buildGallery(mainPhotoEl, thumbsEl, item, altText){
     } else {
       t.textContent = i + 1;
     }
-    t.onclick = () => {
-      show(i);
-      thumbsEl.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
-      t.classList.add('active');
-    };
+    t.onclick = () => selectThumb(i);
     thumbsEl.appendChild(t);
   }
 }

@@ -21,7 +21,9 @@ function buildGallery(mainPhotoEl, thumbsEl, item, altText){
   const show = (i) => {
     if(media && media[i]){
       const m = media[i];
-      if(m.type === 'video'){
+      if(m.type === 'youtube' || m.type === 'drive'){
+        mainPhotoEl.innerHTML = '<iframe src="' + m.url + '" style="width:100%;height:100%;border:0;border-radius:6px;" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+      } else if(m.type === 'video'){
         mainPhotoEl.innerHTML = '<video src="' + m.url + '" controls style="width:100%;height:100%;object-fit:cover;border-radius:6px;"></video>';
       } else {
         mainPhotoEl.innerHTML = '<img src="' + m.url + '" alt="' + altText + '">';
@@ -38,7 +40,7 @@ function buildGallery(mainPhotoEl, thumbsEl, item, altText){
     t.className = 'thumb' + (i === 0 ? ' active' : '');
     if(media && media[i] && media[i].type === 'image'){
       t.innerHTML = '<img src="' + media[i].url + '" alt="">';
-    } else if(media && media[i] && media[i].type === 'video'){
+    } else if(media && media[i] && (media[i].type === 'video' || media[i].type === 'youtube' || media[i].type === 'drive')){
       t.textContent = '▶';
     } else {
       t.textContent = i + 1;

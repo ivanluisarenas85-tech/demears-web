@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <title>Available Puppies | Demears Dachshunds</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='98' fill='%23FAF9F5'/%3E%3Cg transform='translate(100,108)' fill='none' stroke='%23B8912E' stroke-width='4'%3E%3Cpath d='M 62,-4 Q 76,-14 72,-26 Q 68,-16 58,-8 Z'/%3E%3Cellipse cx='4' cy='0' rx='58' ry='16'/%3E%3Cline x1='-40' y1='16' x2='-40' y2='34'/%3E%3Cline x1='-18' y1='18' x2='-18' y2='36'/%3E%3Cline x1='26' y1='18' x2='26' y2='36'/%3E%3Cline x1='48' y1='16' x2='48' y2='32'/%3E%3Ccircle cx='-58' cy='-6' r='15'/%3E%3Cellipse cx='-78' cy='-1' rx='9' ry='6'/%3E%3Cpath d='M -50,-14 Q -34,-10 -36,10 Q -38,20 -48,14 Q -54,4 -52,-10 Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Miniature dachshund puppies currently available at Demears Dachshunds — smooth and long-haired, raised on a Tamborine farm.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
       <div class="puppies-grid" id="girlsGrid"><!--PUPPY_CARDS_GIRLS_START-->
 
         <div class="pcard" onclick="openProfile('x3')">
-          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="ph" style="position:relative;overflow:hidden;"><img src="https://res.cloudinary.com/rrnlkssk/image/upload/v1786936708/Captura_de_pantalla_2026-08-17_131141.png" alt="luisa" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><span class="view-hint">View profile →</span></div>
           <div class="body">
             <h3>luisa</h3>
             <p class="meta">Long coat · purple</p>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="pcard" onclick="openProfile('x4')">
-          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="ph" style="position:relative;overflow:hidden;">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
             <h3>malta</h3>
             <p class="meta">Long coat · orange</p>
@@ -67,7 +67,7 @@
         </div>
 
         <div class="pcard" onclick="openProfile('x5')">
-          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="ph" style="position:relative;overflow:hidden;">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
             <h3>rey</h3>
             <p class="meta">Smooth coat · gray</p>
@@ -86,7 +86,7 @@
       <div class="puppies-grid" id="boysGrid"><!--PUPPY_CARDS_BOYS_START-->
 
         <div class="pcard" onclick="openProfile('x1')">
-          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="ph" style="position:relative;overflow:hidden;"><img src="https://res.cloudinary.com/rrnlkssk/image/upload/v1786936708/Captura_de_pantalla_2026-08-17_131055.png" alt="luis" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><span class="view-hint">View profile →</span></div>
           <div class="body">
             <h3>luis</h3>
             <p class="meta">Smooth coat · cream</p>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="pcard" onclick="openProfile('x2')">
-          <div class="ph">Puppy photo<span class="view-hint">View profile →</span></div>
+          <div class="ph" style="position:relative;overflow:hidden;">Puppy photo<span class="view-hint">View profile →</span></div>
           <div class="body">
             <h3>max</h3>
             <p class="meta">Long coat · red</p>
@@ -172,19 +172,19 @@
      Shape: each puppy keyed by id, with a photoUrls array + updates array. */
   const puppyProfiles = /*__PUPPY_PROFILES_START__*/{
     x3: { name:'luisa', breed:'Dachshund · Long coat', sex:'Female', born:'14/02/2026', color:'purple', vax:'Up to date',
-      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      personality:'Playful and gentle', notes:'eyes that devour you', media:[{type:'image', url:'https://res.cloudinary.com/rrnlkssk/image/upload/v1786936708/Captura_de_pantalla_2026-08-17_131141.png'}],
       updates:[] },
     x4: { name:'malta', breed:'Dachshund · Long coat', sex:'Female', born:'15/02/2026', color:'orange', vax:'Up to date',
-      personality:'Playful and gentle', notes:'', photos:1,
+      personality:'Playful and gentle', notes:'', media:[],
       updates:[] },
     x5: { name:'rey', breed:'Dachshund · Smooth coat', sex:'Female', born:'16/02/2026', color:'gray', vax:'Up to date',
-      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      personality:'Playful and gentle', notes:'eyes that devour you', media:[],
       updates:[{date:'2026-08-14', text:'Went to the vet, all good'},{date:'2026-08-07', text:'Eating on his own now'}] },
     x1: { name:'luis', breed:'Dachshund · Smooth coat', sex:'Male', born:'12/02/2026', color:'cream', vax:'Up to date',
-      personality:'Playful and gentle', notes:'eyes that devour you', photos:1,
+      personality:'Playful and gentle', notes:'eyes that devour you', media:[{type:'image', url:'https://res.cloudinary.com/rrnlkssk/image/upload/v1786936708/Captura_de_pantalla_2026-08-17_131055.png'},{type:'image', url:'https://res.cloudinary.com/rrnlkssk/image/upload/v1786936708/Captura_de_pantalla_2026-08-17_131116.png'}],
       updates:[] },
     x2: { name:'max', breed:'Dachshund · Long coat', sex:'Male', born:'13/02/2026', color:'red', vax:'Up to date',
-      personality:'Playful and gentle', notes:'', photos:1,
+      personality:'Playful and gentle', notes:'', media:[],
       updates:[{date:'2026-08-14', text:'Went to the vet, all good'},{date:'2026-08-07', text:'Eating on his own now'}] }
   }/*__PUPPY_PROFILES_END__*/;
 
